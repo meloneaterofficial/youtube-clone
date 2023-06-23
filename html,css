@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Youtube.com Clone</title>
+    <style>
+
+a {
+      text-decoration: none;
+    }
+
+body{
+  margin: 0;
+}
+
+
+.search-bar {
+  border-color: black;
+  color: black;
+  font-size: 20px;
+  margin-left: 12px;
+  border-radius: 5px;
+  display: block;
+}
+   
+
+.thumbnail {
+ width: 300px;
+ height: 200px;
+ object-fit: contain;
+ object-position: right;
+ margin: 0px;
+ position: relative;
+ 
+}
+
+.video-title {
+  
+  color: black;
+  font-size: large;
+  font-weight: bold;
+  font-family: sans-serif;
+  margin: 0px;
+  margin-left: 8px;
+  margin-bottom: 10px;
+}
+
+.video-author {
+  display: inline-block;
+  margin: 2px;
+  color: rgb(90, 90, 90);
+}
+.video-stats {
+  display: block;
+  margin: 2px;
+  color:  rgb(90, 90, 90);
+}
+
+.video-preview {
+  width: 300px;
+ display: inline-block;
+ margin: 2px;
+ vertical-align: top;
+ margin-right: 18px;
+}
+
+
+.channel-picture {
+ display:inline-block
+
+ 
+ }
+
+
+.profile-pictures {
+display: block;
+width: 45px;
+border-radius: 100px;
+float: left;
+
+
+}
+
+
+.vid-info {
+display: inline-block;
+width: 250px;
+}
+
+.video-info-grid {
+display: grid;
+grid-template-columns: 45px 1fr;
+}
+
+
+
+.channel-profile-pic-2 {
+width: 45px;
+border-radius: 100px;
+position: relative;
+float: left;
+}
+.channel-profile-pic-2 img {
+position: absolute;
+top: 0;
+left: 0;
+
+}
+
+
+.vid-stats-1 {
+display: inline-block;
+width: 250px;
+}
+
+.thumbnail-3 {
+width: 300px;
+height: 200px;
+object-fit: contain;
+object-position: left;
+margin: 0;
+margin-bottom: 0;
+position: relative;
+}
+
+
+.vid-title-3 {
+width: 250px;
+font-size: large;
+font-family: sans-serif;
+font-weight: bold;
+margin: 0;
+
+}
+
+.vid-author-3 {
+display: inline-block;
+  margin: 2px;
+  color: rgb(90, 90, 90);
+}
+
+
+.vid-stats-3 {
+display: block;
+  margin: 2px;
+  color: rgb(90, 90, 90);
+}
+
+.vid-info-3 {
+margin-top: 0px;
+width: 250px;
+margin-left: 50px;
+}
+
+.channel-picture-3 {
+border-radius: 100px;
+width: 45px;
+float: left;
+}
+
+
+.channel-picture-3 {
+position: relative;
+margin-top: -110px;
+}
+
+.video-preview-3 {
+width: 300px;
+ display: inline-block;
+ margin: 2px;
+ vertical-align: top;
+ margin-right: 18px;
+ flex: 1;
+ 
+}
+
+.video-grid {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+column-gap: 16px;
+row-gap: 40px;
+
+}
+
+
+.header {
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.left-section {
+ 
+  width: 150px;
+  display: flex;
+  align-items: center;
+}
+   
+.middle-section {
+  
+  flex: 1;
+  margin-left: 70px;
+  margin-right: 35px;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+}
+
+
+.right-section {
+  width: 200px;
+}
+
+.hamburger-menu {
+  height: 24px;
+  margin-left: 24px;
+  margin-right: 24px;
+  
+
+}
+
+.youtube-logo {
+  height: 20px;
+}
+
+.search-button{
+  width: 66px;
+  height: 40px;
+  background-color: rgb(240, 236, 236);
+  border-style: solid;
+  border-color: rgb(192, 188, 188);
+  margin-left: -2px;
+  margin-right: 8px;
+}
+
+.icon-search {
+height: 25px;
+margin-top: 4px;
+}
+  
+
+
+.search-bar{
+  flex: 1;
+  height: 36px;
+  padding-left: 16px;
+  font-size: 16px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(192, 190, 190);
+  border-radius: 2px;
+  box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+}
+
+.search-bar::placeholder {
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+.voice-search {
+  width: 40px;
+  height: 40px;
+  margin-right: 0;
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(248, 248 248, 248);
+}
+
+.voice-search-icon {
+  height: 24px;
+}
+
+.upload-icon{
+  width: 33px;
+  height: 33px;
+  margin-top: 8px;
+  margin-right: 10px;
+}
+
+.header {
+  height: 55px;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color:rgb(192, 190, 190);
+}
+
+body{
+  margin: 0;
+  padding-top: 60px;
+  padding-left: 80px;
+}
+
+.sidebar {
+  position:fixed;
+  left: 0;
+  bottom: 0;
+  top: 55px;
+  background-color: white;
+  width: 72px;
+  z-index: 200;
+  padding-top: 5px;
+}
+
+.notifs {
+  background-color: rgb(253, 36, 36);
+  color: white;
+  position: absolute;
+  top: 0;
+  font-size: 15px;
+  font-family: sans-serif;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius:10px;
+  margin-left: 110px;
+  margin-top: 3px;
+  border-color: white;
+  
+}
+
+.sidebar-icon {
+ 
+  height: 74px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left:14px;
+}
+
+.sidebar-icon:hover {
+  background-color: lightgrey;
+  cursor: pointer;
+}
+
+.sidebar-icon img {
+  height: 24px;
+  
+}
+
+.sidebad-icon div{
+  font-size: smaller;
+  font-family: sans-serif;
+  font-style: normal;
+
+
+}
+
+    </style>
+    
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="left-section">
+        <img class="hamburger-menu" src="icons/hamburger-menu.svg">
+        <img class= "youtube-logo" src="icons/youtube-logo.svg"> </div>
+
+     
+
+      <div class="middle-section">
+      <input class="search-bar" type="text"
+        placeholder="Search">
+        <button class="search-button"><img class="icon-search" src="icons/search.svg"></button>
+        <button class="voice-search"><img class="voice-search-icon" src="icons/voice-search-icon.svg"></button>
+        
+      
+      </div>
+        
+
+        <div class="right-section"><img class="upload-icon" src="icons/upload.svg">
+          <img class="upload-icon" src="icons/youtube-apps.svg">
+          <img class="upload-icon" src="icons/notifications.svg">
+          <img class="upload-icon" src="icons/my-channel.jpeg">
+          <div class="notifs">3</div>
+        
+        </div>
+    </div>
+  
+    <div class="sidebar">
+    <div class="sidebar-icon"><img src="icons/home.svg">
+      <div>Home</div>
+    </div>
+    <div class="sidebar-icon"><img src="icons/explore.svg">
+    <div>Explore</div>
+    </div>
+    <div class="sidebar-icon"><img src="icons/subscriptions.svg">
+    <div>Subscriptions</div>
+    </div>
+    <div class="sidebar-icon"><img src="icons/originals.svg">
+    <div>Originals</div>
+    </div>
+    <div class="sidebar-icon"><img src="icons/youtube-music.svg">
+    <div>Youtube Music</div>
+    </div>
+    <div class="sidebar-icon"><img src="icons/library.svg">
+    <div>Library</div>
+    </div></div>
+
+   
+    <div class="video-grid"><div class="video-preview">
+      
+      
+      <div><img class="thumbnail" src="thumbnails/hq720.jpg">
+      </div>
+      
+       
+
+        <div class="vid-stats-1"> 
+          <p class="video-title"><a color="black" href="https://www.youtube.com/watch?v=XXAzNhrfjVY">my everyday makeup + skincare routine</a></p>
+          <P class="video-author">Erika Diane</P>
+          <P class="video-stats">1M views &#183; 10 months ago</P>
+        </div>
+      <img class="channel-profile-pic-2" src="channel-pictures/lol.jpeg">
+       
+      </div>
+      
+
+
+      <div class="video-preview">
+      
+        <div><img class="thumbnail" src="thumbnails/omg.jpeg">
+        </div>
+        
+         
+  
+          <div class="vid-stats-1"> 
+            <p class="video-title"><a href="https://www.youtube.com/watch?v=J2W6QvsajEo&pp=ygUJc2FyYWggcGFu">living & Working In NYC 👩‍💻 balancing my 9-5 job with content creation & social life</a></p>
+            <P class="video-author">sarah pan</P>
+            <P class="video-stats">30k views &#183; 2 weeks ago</P>
+          </div>
+        <img class="channel-profile-pic-2" src="channel-pictures/omg.jpeg">
+         
+        </div>
+        
+
+        <div class="video-preview">
+      
+          <div><img class="thumbnail" src="thumbnails/hi.jpeg">
+          </div>
+          
+           
+    
+            <div class="vid-stats-1"> 
+              <p class="video-title"><a href="https://www.youtube.com/watch?v=ucreWJ5Q2xQ&pp=ygUEZWxsZQ%3D%3D">Stray Kids Reveal The First Celebrity To Follow Them On Social Media | First Thing With | ELLE</a></p>
+              <P class="video-author">ELLE</P>
+              <P class="video-stats">293k views &#183; 12 hours ago</P>
+            </div>
+          <img class="channel-profile-pic-2" src="channel-pictures/hi.jpeg">
+           
+          </div>
+
+
+        <div class="video-preview">
+      
+      <div><img class="thumbnail" src="thumbnails/hey.jpeg">
+      </div>
+      
+       
+
+        <div class="vid-stats-1"> 
+          <p class="video-title"><a href="https://www.youtube.com/watch?v=5quzc7Nhw3o&pp=ygUSc2FyYW5naG9lIHVuaSB2bG9n">uni vlog: exciting news, study abroad ceremony, cute stationary haul, spring cleaning, life updates</a></p>
+          <P class="video-author">saranghoe</P>
+          <P class="video-stats">531k views &#183; 2 months ago</P>
+        </div>
+      <img class="channel-profile-pic-2" src="channel-pictures/hey.jpeg">
+       
+      </div>
+
+    </div>
+<div class="video-grid">
+    <div class="video-preview">
+      <div><img class="thumbnail" src="thumbnails/hq720.webp"></div>
+      <div class="vid-info"> <p class="video-title"><a href="https://www.youtube.com/watch?v=W2ANDKQ4lBs&pp=ygUNYW5uaWthJ3MgbGVhZg%3D%3D">pinterest girl summer GLOW UP 🌷🧸makeup routine, aesthetic iphone, journaling, recipes, piercing tour</a></p>
+        <P class="video-author">annika's leaf</P>
+        <P class="video-stats">49k views &#183; 21 hours ago</P>
+     
+      
+      </div>
+      <img class="profile-pictures" src="channel-pictures/123.jpeg">
+
+        
+  </div>
+    
+    
+    
+    <div class="video-preview">
+      <div><img class="thumbnail" src="thumbnails/maxresdefault.jpg">
+      </div>
+      
+       
+
+        <div class="vid-stats-1"> 
+          <p class="video-title"><a href="https://www.youtube.com/watch?v=-vrxI66fgcQ&pp=ygURdm9ndWUgMiBkZXNpZ25lcnM%3D">2 Designers Transform Each Other’s Work (ft. Stella McCartney & Shie Lyu) | Vogue</a></p>
+          <P class="video-author">Vogue</P>
+          <P class="video-stats">52k views &#183; 18 hours ago</P>
+        </div>
+      <img class="channel-profile-pic-2" src="channel-pictures/lmao.jpeg">
+       
+      </div>
+
+    
+      <div class="video-preview">
+        <div><img class="thumbnail" src="thumbnails/nah.jpeg">
+        </div>
+        
+         
+  
+          <div class="vid-stats-1"> 
+            <p class="video-title"><a href="https://www.youtube.com/watch?v=vAsbzpjTCxM&pp=ygUbdmFuZXNzYSB0aWl1IGxvbmRvbiBkaWFyaWVz">London Diary | travel VLOG, first time in the city, cafes & eats, hidden gems</a></p>
+            <P class="video-author">Vanessa Tiiu</P>
+            <P class="video-stats">12k views &#183; 1 day ago</P>
+          </div>
+        <img class="channel-profile-pic-2" src="channel-pictures/nah.jpeg">
+         
+        </div>
+  
+      
+
+        <div class="video-preview">
+          <div><img class="thumbnail" src="thumbnails/lolol.jpeg">
+          </div>
+          
+           
+    
+            <div class="vid-stats-1"> 
+              <p class="video-title"><a href="https://www.youtube.com/watch?v=1DpKfz_Cg4s&pp=ygUgc2FsZW0gdG92YXIgZ2VueiBvdmVyY29uc3VtcHRpb24%3D">We Need To Talk About Gen Z's Overconsumption Problem... | Analysis</a></p>
+              <P class="video-author">Salem Tovar</P>
+              <P class="video-stats">442k views &#183; 1 month ago</P>
+            </div>
+          <img class="channel-profile-pic-2" src="channel-pictures/lolol.jpeg">
+           
+          </div>
+
+
+        <div class="video-preview">
+          <div><img class="thumbnail" src="thumbnails/heh.jpeg">
+          </div>
+          
+           
+    
+            <div class="vid-stats-1"> 
+              <p class="video-title"><a href="https://www.youtube.com/watch?v=TEBRI0lMMrE">Turning My Love Of "Real Fruit" Ice Cream Into $650K In Sales</a></p>
+              <P class="video-author">CNBC Make It</P>
+              <P class="video-stats">105k views &#183; 3 days ago</P>
+            </div>
+          <img class="channel-profile-pic-2" src="channel-pictures/heh.jpeg">
+           
+          </div>
+          
+          
+          <div class="video-preview">
+      
+      <div><img class="thumbnail" src="thumbnails/k.jpeg">
+      </div>
+      
+       
+
+        <div class="vid-stats-1"> 
+          <p class="video-title"><a href="https://www.youtube.com/watch?v=k9WqpQp8VSU&pp=ygUZaG93IGkgd291bGQgbGVhcm4gdG8gY29kZQ%3D%3D">How I Would Learn To Code (If I Could Start Over)</a></p>
+          <P class="video-author">Namanh Kapur</P>
+          <P class="video-stats">5.1M views &#183; 1 year ago</P>
+        </div>
+      <img class="channel-profile-pic-2" src="channel-pictures/k.jpeg">
+       
+      </div>
+
+      <div class="video-preview">
+      
+        <div><img class="thumbnail" src="thumbnails/idk.jpeg">
+        </div>
+        
+         
+  
+          <div class="vid-stats-1"> 
+            <p class="video-title"><a href="https://www.youtube.com/watch?v=xu9wOyrdEAM&pp=ygUFaXBvZCA%3D">🧸Buying a modded iPod classic in 2023 | 5.5 enhanced | unboxing + customization</a></p>
+            <P class="video-author">Nananaji glo.</P>
+            <P class="video-stats">76k views &#183; 1 month ago</P>
+          </div>
+        <img class="channel-profile-pic-2" src="channel-pictures/idk.jpeg">
+         
+        </div>
+
+        <div class="video-preview">
+      
+          <div><img class="thumbnail" src="thumbnails/i.jpeg">
+          </div>
+          
+           
+    
+            <div class="vid-stats-1"> 
+              <p class="video-title"><a href="https://www.youtube.com/watch?v=-tld0bc0t3k&pp=ygUgbmF0YWNoYSBvY2VhbmUgYmVzdCB3b3Jrb3V0IHBsYW4%3D">How to Create the Perfect Workout Plan // Ultimate Guide</a></p>
+              <P class="video-author">Natacha Océane</P>
+              <P class="video-stats">1.4M views &#183; 1 year ago</P>
+            </div>
+          <img class="channel-profile-pic-2" src="channel-pictures/i.jpeg">
+           
+          </div>
+  
+
+   </div>
+</div>   
+
+  </body>
+</html>
